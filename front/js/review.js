@@ -1,5 +1,5 @@
 
-let url = "http://127.0.0.1:3000";
+let url = "http://13.209.127.234/:3000";
 
 const btnreviewWrite = document.querySelector("#reviewWriteSubmit");
 
