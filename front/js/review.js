@@ -1,9 +1,9 @@
 
-let url = "http://13.209.127.234/:3000";
+let url = "http://13.209.127.234:3000";
 
 const btnreviewWrite = document.querySelector("#reviewWriteSubmit");
 
-// 1. #signup 클릭
+// 저장하기 클릭
 btnreviewWrite.addEventListener("click", signup);
 
 async function signup(event) {
@@ -14,7 +14,7 @@ async function signup(event) {
   const review = document.querySelector("#inputReviewBox").value;
   const pictureURL = document.querySelector("#picture").value;
 
-  // 3. 회원가입 API 요청
+  // 맛집등록 API 요청
   const signUpReturn = await axios({
     method: "post", // http method
     url: url + "/write",
@@ -22,7 +22,7 @@ async function signup(event) {
     data: { title: title, category: category, address: address,  star: star, review:review, pictureURL: pictureURL }, // packet body
   });
 
-  // 4. 요청이 성공적이지 않다면, alert message
+  // 요청이 성공적이지 않다면, alert message
   const isValidSignUp = signUpReturn.data.code == 200;
 
   if (!isValidSignUp) {
