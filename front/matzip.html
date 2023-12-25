@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>맛집기록지도</title>
+  <meta name="author" content="나인일" />
+  <meta name="description" content="맛집기록지도" />
+  <meta name="keywords" content="맛집, 맛집지도, 맛집기록" />
+  <link rel="stylesheet" href="./css/matzip.css" />
+  <link rel="stylesheet" href="./css/map.css" />
+  <link rel="stylesheet" href="./css/star.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="inner">
+      <div class="nav-container">
+        <h1 class="nav-title" onclick="window.location.reload()">맛집기록지도</h1>
+        <a class="nav-review" href="./reviewWrite.html" target="_self">+</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section id="category"> <!-- 카테고리 -->
+      <div class="inner">
+
+        <div class="category-container">
+          <h2 class="category-title">-----   CATEGORY   -----</h2>
+          <div class="category-list">
+            <button class="category-item" id="korea">
+              한식
+              <img src="./mapmarker/korea.png" width="30"></button>
+            <button class="category-item" id="china">
+              중식
+              <img src="./mapmarker/china.png" width="30"></button>
+            </button>
+            <button class="category-item" id="western">
+              양식
+              <img src="./mapmarker/western.png" width="30"></button>
+            </button>
+            <button class="category-item" id="japan">
+              일식
+              <img src="./mapmarker/japan.png" width="30"></button>
+            </button>
+            <button class="category-item" id="wheat">
+              분식
+              <img src="./mapmarker/wheat.png" width="30"></button>
+            </button>
+            <button class="category-item" id="meat">
+              고기/구이
+              <img src="./mapmarker/meat.png" width="30"></button>
+            </button>
+            <button class="category-item" id="cafe">
+              카페/디저트
+              <img src="./mapmarker/cafe.png" width="30"></button>
+            </button>
+            <button class="category-item" id="etc">
+              기타
+              <img src="./mapmarker/etc.png" width="30"></button>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      
+
+
+    </section>
+    <div id="map" class="inner"></div>
+    <!-- 카카오지도 -->
+
+  
+
+
+  </main>
+
+ 
+
+ 
+
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f279b00832a2e96bf33fbd5a98944007&libraries=services"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/axios-script.js"></script>
+</body>
+
+</html>

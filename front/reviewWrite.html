@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰기록</title>
+    <meta name="author" content="나인일" />
+    <meta name="description" content="맛집기록지도" />
+    <meta name="keywords" content="맛집, 맛집지도, 맛집기록" />
+    <link rel="stylesheet" href="./css/matzip.css" />
+    <link rel="stylesheet" href="./css/review.css" />
+</head>
+<body>
+    <nav>
+        <div class="inner">
+          <div class="nav-container">
+            <h1 class="nav-title" onclick="location.href='matzip.html'">맛집기록지도</h1>
+          </div>
+        </div>
+      </nav>
+
+      <div class="innerReview">
+        <div id="container">
+            <section id="reviewWrite">
+                <div id="reviewWriteCenter">
+                    <form id="reviewWriteForm" method="post" action="">
+                        <div class="row">
+                            <h2>맛집 이름</h2>
+                            <div class="inputBox">
+                                <input type="text" name="placeName" id="placeName" placeholder="이곳은 어디인가요?">
+                            </div>
+                        </div>
+
+                        <div class="row categoryRow">
+                            <h2>카테고리</h2>
+
+                            <div class="cc-selector">
+                                <input id="korea" type="radio" name="category" value="한식"/>
+                                <label for="korea" class="button-cc korea">
+                                    <img src="./mapmarker/korea.png">
+                                </label>
+                                <input id="china" type="radio" name="category" value="중식"/>
+                                <label for="china" class="button-cc china">
+                                    <img src="./mapmarker/china.png">
+                                </label>
+                                <input id="western" type="radio" name="category" value="양식"/>
+                                <label for="western" class="button-cc western">
+                                    <img src="./mapmarker/western.png">
+                                </label>
+                                <input id="japan" type="radio" name="category" value="일식"/>
+                                <label for="japan" class="button-cc japan">
+                                    <img src="./mapmarker/japan.png">
+                                </label>
+                                <input id="wheat" type="radio" name="category" value="분식"/>
+                                <label for="wheat" class="button-cc wheat">
+                                    <img src="./mapmarker/wheat.png">
+                                </label>
+                                <input id="meat" type="radio" name="category" value="고기/구이"/>
+                                <label for="meat" class="button-cc meat">
+                                    <img src="./mapmarker/meat.png">
+                                </label>
+                                <input id="cafe" type="radio" name="category" value="카페/디저트"/>
+                                <label for="cafe" class="button-cc cafe">
+                                    <img src="./mapmarker/cafe.png">
+                                </label>
+                                <input id="etc" type="radio" name="category" value="기타"/>
+                                <label for="etc" class="button-cc etc">
+                                    <img src="./mapmarker/etc.png">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h2>주소</h2>
+                            <div class="inputBox">
+                                <input type="text" name="placeAddress" id="placeAddress" placeholder="정확한 도로명주소를 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h2>별점</h2>
+                            <div class="selectBox">
+                                <select name="star" id="star">
+                                    <option value="">별점</option>
+                                    <option value="5">⭐⭐⭐⭐⭐</option>
+                                    <option value="4">⭐⭐⭐⭐</option>
+                                    <option value="3">⭐⭐⭐</option>
+                                    <option value="2">⭐⭐</option>
+                                    <option value="1">⭐</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h2>후기</h2>
+                            <textarea id="inputReviewBox" placeholder="맛있었던 메뉴나 후기를 작성해주세요"></textarea>
+                        </div>
+
+                        <div class="row">
+                            <h2>사진 첨부</h2>
+
+                            <div class="inputBox">
+                                <input type="text" id="picture" placeholder="정확한 이미지주소를 입력해주세요">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <p id="valueError"></p>
+                        </div>
+                        <div class="row">
+                            <div class="submitBox">
+                                <input type="button" id="reviewWriteSubmit" value="저장하기">
+                            </div>
+                        </div>
+                        <input type="hidden" name="mode" value="save"/>  
+                    </form>
+                </div>
+            </section>
+        </div>
+      </div>
+        
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+      <script type="text/javascript" src="./js/review.js"></script>
+
+</body>
+</html>
