@@ -29,5 +29,5 @@ async function signup(event) {
     return alert("요청에 문제가 생겼습니다.");
   }
 
-  return location.replace("../front/matzip.html");
+  return location.replace("../matzip.html");
 }
